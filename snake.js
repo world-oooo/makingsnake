@@ -15,7 +15,7 @@ let snake = [
     { x: 110, y: 150 }
 ];
 
-function drawSnake(snakePart) {
+function drawSnakePart(snakePart) {
     ctx.fillStyle = "lightgreen";
     ctx.strokeStyle = "darkgreen";
     ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
