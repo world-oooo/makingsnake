@@ -14,3 +14,15 @@ let snake = [
     { x: 120, y: 150 },
     { x: 110, y: 150 }
 ];
+
+function drawSnake(snakePart) {
+    ctx.fillStyle = "lightgreen";
+    ctx.strokeStyle = "darkgreen";
+    ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
+    ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+}
+
+function drawSnake() {
+    snake.forEach(drawSnakePart);
+}
+drawSnake();
