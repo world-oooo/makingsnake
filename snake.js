@@ -19,8 +19,8 @@ function drawSnakePart(snakePart) {
 function drawSnake() {
     snake.forEach(drawSnakePart);
 }
-const dx = 10;
-const dy = 0;
+let dx = 10;
+let dy = 0;
 function advanceSnake() {
     const head = {
         x: snake[0].x + dx,
@@ -36,6 +36,12 @@ function clearCanvas() {
     ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
     ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
 }
-clearCanvas();
-advanceSnake();
-drawSnake();
+function main() {
+    setTimeout(function onTick() {
+        clearCanvas();
+        advanceSnake();
+        drawSnake();
+        main();
+    }, 100);
+}
+main();
