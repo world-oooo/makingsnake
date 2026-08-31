@@ -26,10 +26,11 @@ function drawSnake() {
     snake.forEach(drawSnakePart);
 }
 const dx = 10;
+const dy = 0;
 function advanceSnake() {
     const head = {
         x: snake[0].x + dx,
-        y: snake[0].y
+        y: snake[0].y + dy
     };
 
     snake.unshift(head);
